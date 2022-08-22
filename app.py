@@ -93,13 +93,16 @@ def predict():
         model=pickle.load(open('Major_college_RF_2.pkl','rb'))
         
     elif models==2:
-        model=pickle.load(open('Major_college_DT_2.pkl.pkl','rb'))
+        model=pickle.load(open('Major_college_KNN_2.pkl.pkl','rb'))
        
     elif models==3:
-        model=pickle.load(open('Major_college_log_3.pkl','rb'))
+        model=pickle.load(open('Major_college_NB_2.pkl','rb'))
         
     elif models==4:
         model=pickle.load(open('Major_college_SVM_2.pkl','rb'))
+      
+    elif models==5:
+        model=pickle.load(open('Major_college_log_3.pkl','rb'))
 
     prediction = model.predict([[Type,Accreditation,Interest,Residence,parents,grades]])
     if prediction==1:
