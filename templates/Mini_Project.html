@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    
+
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+<div class="topnav">
+  <a class="active" href="/Home">Home</a>
+  <a href="/About_Us" style="color: red; ">About_Us</a>
+  <a href="/Form" style="color: red; ">Form</a>
+  <a href="/Description" style="color: red; ">Description</a>
+</div>
+
+
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin:10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+</head>
+<body>
+
+<h2>MINI PROJECTS</h2>
+
+<div style="display:grid ; grid-template-columns: auto auto auto auto;">
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/decision-tree-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Decision Tree</b></h4> 
+
+    <a href="https://harshitpratap7121-decisiontree-streamlit-app-bs14jl.streamlitapp.com/"><button>Click</button></a>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/navie-bayesQR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Naive Bayes</b></h4> 
+   
+    <a href="https://harshitpratap7121-nlp-using-naive-theoram-app-d4smw9.streamlitapp.com/"><button>Click</button></a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/PROJECT-2-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Project 2</b></h4> 
+
+    <a href="https://harshit-pratap-project2-house.herokuapp.com/"><button>Click</button></a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/project-3-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Project 3</b></h4> 
+
+    <a href="https://harshitpratap7121-project3-decisiontree-app-avnqpz.streamlitapp.com/"><button>Click</button></a>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/PROJECT-4-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Project 4</b></h4> 
+
+    <a href="https://harshit-pratap-knn-project4.herokuapp.com/"><button>Click</button></a>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/PROJECT-5-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Project 5</b></h4> 
+
+    <a href="https://harshitpratap7121-project-5-npl-app-339i8e.streamlitapp.com/"><button>click</button></a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/PROJECT-6-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Project 5</b></h4> 
+
+    <a href="https://harshit-pratap-project-6.herokuapp.com/"><button>click</button></a>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="{{ url_for('static',filename = 'image/PROJECT-7-QR.png')  }}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Project 7</b></h4> 
+
+    <a href="https://harshit-pratap-project-7.herokuapp.com/"><button>Click</button></a>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html> 

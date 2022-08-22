@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+<style>
+    
+
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+<div class="topnav">
+  <a class="active" href="/Home">Home</a>
+  <a href="/About_Us" style="color: red; ">About_Us</a>
+  <a href="/Form" style="color: red; ">Form</a>
+</div>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Classification Models used in Project</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Decision Tree</h2>
+    <p>Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike
+other supervised learning algorithms, the decision tree algorithm can be used for solving
+regression and classification problems too.
+The goal of using a Decision Tree is to create a training model that can use to predict
+the class or value of the target variable by learning simple decision rules inferred from
+prior data(training data).</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Random Forest</h2>
+    <p>A Random forest is a Supervised Machine Learning Algorithm that is used widely in Classification and Regression problems.
+     It builds decision trees on different samples and takes their majority vote for classification and average in case of regression.</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>K-Nearest Neighbor</h2>
+    <p>K-Nearest Neighbor (KNN) algorithm predicts based on the specified number (k) of
+the nearest neighboring data points. Here, the pre-processing of the data is
+significant as it impacts the distance measurements directly. Unlike others, the model
+does not have a mathematical formula, neither any descriptive ability.</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>Naïve Bayes</h2>
+    <p>Naïve Bayes algorithm is a supervised learning algorithm, which is based on Bayes
+theorem and used for solving classification problems. It is mainly used in text
+classification that includes a high-dimensional training dataset.
+Naïve Bayes Classifier is one of the simple and most effective Classification
+algorithms which helps in building the fast machine learning models that can make
+quick predictions.</p>
+  </div>
+
+  <div class="column" style="background-color:#ddd;">
+    <h2>SVM</h2>
+    <p>SVMs are used in applications like handwriting recognition, intrusion detection, face
+detection, email classification, gene classification, and in web pages. This is one of
+the reasons we use SVMs in machine learning. It can handle both classification and
+regression on linear and non-linear data</p>
+  </div>
+</div>
+
+<div class="col-md-12">
+              <center><h3 class="section-title" style="text-align: center;">Sponsored by</h3></center>
+            </div>
+          
+          <br>
+          <br>
+    
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="card mb-3">
+            
+                    <div class="card">
+                        <img style="max-height: 200px;" src="{{ url_for('static',filename = 'image/AICTEIdeaLabFooterLogo.png')  }}"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">IDEA LAB</h5>
+                            
+                        </div>
+            
+            
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-4">
+                <div class="card mb-3">
+            
+                    <div class="card">
+                        <img style="max-height: 200px;" src="{{ url_for('static',filename = 'image/nbanew.png')  }}"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">NBA</h5>
+                            
+                        </div>
+            
+            
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-10 col-md-3">
+                <div class="card mb-3">
+
+                    <div class="card">
+                        <img style="max-height: 200px;"
+                            src="{{ url_for('static',filename = 'image/aicte-logo.png')  }}"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"; style="text-align:center">AICTE MODROB DEEP LEARNING LAB</h5>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="fixed-bottom ">
+        <div class="bg-secondary " style="min-height: 40px;">
+
+            <marquee style="color:#fff; margin-top: 7px;">
+                <h9>Developed by  Harshit Pratap ,Department of Computer Engineering, PIET</h9>
+            </marquee>
+        </div>
+    </div>
+    <!-- change later-->
+    <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+
+</body>
+</html>

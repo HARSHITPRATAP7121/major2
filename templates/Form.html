@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning  Major Project Deployment</title>
+<meta charset="UTF-8">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+</style>
+</head>
+
+<style>
+    
+
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+<div class="topnav">
+  <a class="active" href="/Home">Home</a>
+  <a href="/About_Us" style="color: red; ">About_Us</a>
+  <a href="/Description" style="color: red; ">Description</a>
+</div>
+
+
+<body>
+      
+<div class="" style="background-color:mediumslateblue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Summer Internship 2022 on Machine learning and Data Science</p></center> 
+</div>
+</div>
+</div>
+
+ <div class="form1">
+        <form action="{{ url_for('predict')}} "method="get" class="row g-3 my-4">
+
+            <div class="col-12" style="color: black;">
+                <label for="floatingInput" class="form-label">Type of school</label>
+                <select name="Type" id="Type">
+                     <option value="0">Academic</option>
+                     <option value="1">Vocational</option>
+                </select>
+            </div>
+
+            <div class="col-12" style="color: black;">
+                <label for="floatingInput" class="form-label">School Accreditation</label>
+                <select name="Accreditation" id="Accreditation">
+                     <option value="0">A</option>
+                     <option value="1">B</option>
+                </select>
+            </div>
+
+            <div class="col-12" style="color: black;">
+                <label for="floatingInput" class="form-label">Interest of Student</label>
+                <select name="Interest" id="Interest">
+                     <option value="0">Interested</option>
+                     <option value="1">Less Interested</option>
+                     <option value="2">Not Interested</option>
+                     <option value="3">Uncertain</option>
+                     <option value="4">Very Interested</option>
+                </select>
+            </div>
+
+            <div class="col-12" style="color: black;">
+                <label for="floatingInput" class="form-label">Residence</label>
+                <select name="Residence" id="Residence">
+                     <option value="0">Rural</option>
+                     <option value="1">Urban</option>
+                </select>
+            </div>
+
+
+            <div class="col-12" style="color: black;">
+                <label for="floatingInput" class="form-label">Enter Parents Salary </label>
+                <input type="number" class="form-control" id="parents" name="parents" step="any" required="required" placeholder="Enter Parents Salary">
+            </div>
+
+            <div class="col-12" style="color: black;">
+                <label for="floatingInput" class="form-label">Enter the Grades of Student</label>
+                <input type="number" class="form-control" id="grades" name="grades" step="any" required="required" placeholder="Enter the Grades of Student">
+            </div>
+            <br>
+
+            <div <label for="models">Choose a Model</label>
+                   <select name="models" id="exp">
+                     <option value="0">Decision Tree</option>
+                     <option value="1">Random Forest</option>
+                     <option value="2">KNN </option>
+                     <option value="3">Naive Bayes </option>
+                     <option value="4">SVM linear</option>
+                   </select>
+                 
+                 <br>
+                 <br>
+                 <br><center>
+                 <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                 </center>
+                 </form>
+                 <br>
+                 <br><center>
+                 {{ prediction_text }}
+                 <br>
+                 </div>
+
+                  <!--class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=0>Decision Tree</button>
+            </div>
+
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=1>Random Forest</button>
+            </div>
+
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=2> KNN </button>
+            </div>
+
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=3> Naive Bayes</button>
+            </div>
+
+            <div class="col-15" align='center'>
+                <button type="submit" class="btn btn-outline-primary" value=4>SVM linear</button>
+            </div>
+            
+<div class="" style="background-color:mediumslateblue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Experiment Performed in Summer internship 2022 from 27 June to 8 August </p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
+
+            
+
